@@ -1,0 +1,24 @@
+{
+    "name": "blocksframework/data",
+    "description": "Classes for data structures of the Blocks PHP framework",
+    "license": "MIT",
+    "keywords": [
+        "blocks",
+        "framework",
+        "data"
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blocks\\Data\\":"src/class"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stephen Stephenson",
+            "email": "stephenson.inbox@gmail.com"
+        }
+    ]
+}
