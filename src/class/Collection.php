@@ -2,21 +2,19 @@
 
 namespace Blocks\Data;
 
-use Iterator;
-use Countable;
-
-abstract class Collection implements Iterator, Countable {
+abstract class Collection implements \Iterator, \Countable {
     protected $position = 0;
 
     protected array $array;
 
-    public function __construct(array $items) {
+    public function __construct( array $items ) {
         $this->array = [];
 
-        if ( !empty($items) ) {
-            if ( is_array($items) ) {
+        if ( !empty( $items ) ) {
+            if ( is_array( $items ) ) {
                 $this->array = $items;
-            } else {
+            }
+            else {
                 $this->array[] = $items;
             }
         }
@@ -38,10 +36,10 @@ abstract class Collection implements Iterator, Countable {
     }
 
     public function valid(): bool {
-        return isset($this->array[ $this->position ]);
+        return isset( $this->array[$this->position] );
     }
 
     public function count(): int {
-        return count($this->array);
+        return count( $this->array );
     }
 }
