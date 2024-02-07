@@ -24,10 +24,9 @@ abstract class Collection implements \Iterator, \Countable {
         $this->position = 0;
     }
 
-    abstract public function current();
+    abstract public function current(): mixed;
 
-    #[\ReturnTypeWillChange]
-    public function key() {
+    public function key(): mixed {
         return $this->position;
     }
 
